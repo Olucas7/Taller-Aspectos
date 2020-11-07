@@ -10,7 +10,7 @@ public aspect Logger {
 
 	pointcut transaction():execution(void *moneyMakeTransaction*(..));
 
-	pointcut money():execution(void *moneyWithdrawal*(..));
+	pointcut money():execution(void *money*(..));
 
 	pointcut user():execution(void *createUser*(..));
 
@@ -45,5 +45,4 @@ public aspect Logger {
 			e.printStackTrace();
 		}
 	}
-
 }
